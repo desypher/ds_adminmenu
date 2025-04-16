@@ -8,15 +8,20 @@ version '1.0'
 lua54 'yes'
 
 client_scripts {
+    '@qbx_core/modules/playerdata.lua',
+    'config/client.lua',
     'client/*.lua'
 }
 
 server_scripts {
+    'config/server.lua',
     'server/*.lua'
 }
 
 shared_scripts {
-    'config.lua'
+    '@ox_lib/init.lua',
+    '@qbx_core/modules/lib.lua',
+    'config/shared.lua',
 }
 
 ui_page 'ui/dist/index.html'
